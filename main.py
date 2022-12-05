@@ -29,12 +29,12 @@ def block():
 
 def unblock():
     while True:
-        site = input('Введите сайт для блокировки: ')
+        site = input('Введите сайт для разблокировки: ')
         if site == 'exit':
             break
         websites.append(site)
-        print(f'Ссылка {site} добавлена!')
-        print('Если Вы добавили все сайты, для выхода отправьте "exit"')
+        print(f'Ссылка {site} удалена!')
+        print('Если Вы разблокировали все сайты, для выхода отправьте "exit"')
 
     with open(path_to_hosts, 'r+') as file:
         content = file.readlines()
